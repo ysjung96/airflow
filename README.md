@@ -1,0 +1,21 @@
+# Airflow Master Class
+
+## 도커, Airflow 설치 on WSL
+## WSL 도커, Airflow 실행
+- sudo service docker start
+- sudo docker compose up
+- sudo docker ps
+- Airflow UI: http://localhost:8080
+
+## 파이썬 버전 확인
+- sudo docker exec -it ysjung-airflow-worker-1 bash
+- python -V
+```
+Python 3.6.15
+```
+
+## 파이썬 가상환경
+- python -m venv ./venv
+
+## Airflow 라이브러리 설치
+- pip install apache-airflow[라이브러리명]
