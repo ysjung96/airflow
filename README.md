@@ -4,6 +4,7 @@
 ## WSL 도커, Airflow 실행
 - sudo service docker start
 - sudo docker compose up
+- sudo docker compose down
 - sudo docker ps
 - Airflow UI: http://localhost:8080
 
@@ -18,4 +19,4 @@ Python 3.6.15
 - python -m venv ./venv
 
 ## Airflow 라이브러리 설치
-- pip install apache-airflow[라이브러리명]
+- pip install "apache-airflow[celery]==2.10.5" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.8.txt"
