@@ -1,6 +1,19 @@
 # Airflow Master Class
 
 ## 도커, Airflow 설치 on WSL
+- vi /etc/resolv.conf
+```
+nameserver 8.8.8.8
+```
+- sudo apt install resolvconf -y
+- curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.10.5/docker-compose.yaml'
+```
+mkdir -p ./dags ./logs ./plugins ./config
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+```
+- sudo docker compose up airflow-init
+- sudo docker compose down --rmi all --volumes --remove-orphans
+
 ## WSL 도커, Airflow 실행
 - sudo service docker start
 - sudo docker compose up
